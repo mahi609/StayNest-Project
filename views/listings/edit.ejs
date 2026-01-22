@@ -1,0 +1,52 @@
+<% layout("/layouts/boilerplate.ejs") -%>
+<body>
+    <form method="POST" action="/listings/<%= listings._id %>?_method=PUT" class="container mt-5  needs-validation" style="max-width: 600px;" novalidate>
+        
+        <!-- Title -->
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="titleInput" name="listing[title]" placeholder="Enter Title" value="<%= listings.title %>" required>
+            <label for="titleInput">Enter Title</label>
+               <div class="valid-feedback"> looks Good</div> 
+        </div>
+
+        <!-- Description -->
+        <div class="form-floating mb-3">
+            <textarea class="form-control" id="descriptionInput" name="listing[description]" placeholder="Enter Description" rows="5" required><%= listings.description %></textarea>
+            <label for="descriptionInput">Enter Description</label>
+            <div class="invalid-feedback">Description Should be Mendatory</div>
+        </div>
+
+        <!-- Country -->
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="countryInput" name="listing[country]" placeholder="Enter Country" value="<%= listings.country %>" required>
+            <label for="countryInput">Enter Country</label>
+            <div class="invalid-feedback">Enter Valid country</div>
+        </div>
+
+        <!-- Image URL -->
+        <div class="form-floating mb-3">
+            <input type="url" class="form-control" id="imgInput" name="listing[img]" placeholder="Enter Image URL" value="<%= listings.img %>" required>
+            <label for="imgInput">Enter Image URL</label>
+            <div class="invalid-feedback">Enter Valid URL</div>
+        </div>
+
+        <!-- Price -->
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="priceInput" name="listing[price]" placeholder="Enter Price" value="<%= listings.price %>" required>
+            <label for="priceInput">Enter Price</label>
+            <div class="invalid-feedback">Enter Valid Price</div>
+        </div>
+        
+        <!-- Location -->
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="locationInput" name="listing[location]" placeholder="Enter Location" value="<%= listings.location %>" required>
+            <label for="locationInput">Enter Location</label>
+            <div class="invalid-feedback">Enter Valid Location</div>
+        </div>
+
+
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary w-100">Edit</button>
+    </form>
+</body>

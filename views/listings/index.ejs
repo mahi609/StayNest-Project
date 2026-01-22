@@ -1,0 +1,52 @@
+<% layout("/layouts/boilerplate.ejs") -%>
+<body>
+
+<div class="container my-4">
+
+  <div class="row g-4 justify-content-center">
+
+    <% for(let listings of alllisting){ %>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+
+        <div class="card shadow-sm border-0 rounded-4 h-100" style="width: 22rem;">
+
+          <!-- IMAGE -->
+          <img 
+            src="<%= listings.img %>" 
+            class="card-img-top rounded-top-4"
+            alt="listing"
+            style="height: 16rem; object-fit: cover;"
+          >
+
+          <!-- COMPACT BODY -->
+          <div class="card-body py-3 d-flex flex-column">
+
+            <h6 class="card-title fw-semibold mb-1 text-truncate">
+              <%= listings.title %>
+            </h6>
+
+            <p class="card-text text-success fw-bold mb-2 small">
+              ₹<%= listings.price.toLocaleString("en-IN") %>
+            </p>
+
+            <a 
+              href="/listings/<%= listings._id %>" 
+              class="btn btn-sm btn-outline-primary mt-auto rounded-pill"
+            >
+              View Details
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    <% } %>
+
+  </div>
+
+</div>
+
+</body>

@@ -1,0 +1,113 @@
+body {
+    /* 1. Ensure the body takes up at least the full viewport height */
+    min-height: 100vh;
+
+    /* 2. Enable Flexbox on the body */
+    display: flex;
+
+    /* 3. Stack elements vertically (header, content, footer) */
+    flex-direction: column;
+}
+
+
+.navbar{
+    height: 5rem;
+}
+.container{
+    flex: 1;
+}
+footer{
+   position: relative;
+   bottom: 0%;
+}
+.fa-airbnb{
+    color: #FF5A5F;
+    font-size: 2.2rem;
+}
+.nav-link{
+    color: #222222 !important;
+}
+.sticky-top{
+    background-color: white;
+}
+.f-link a{
+    text-decoration: none;
+    color: #222222 !important;
+}
+.f-link a:hover{
+    text-decoration: underline;
+   
+}
+
+.f-info{
+    text-align: center;
+    height: 8rem;
+    background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+}
+.f-social{
+    width: 100%;
+    font-size: 1.3rem;
+}
+.f-link{
+    width: 100%;
+}
+
+/* cards */
+
+.card{
+   margin-bottom: 4rem;   
+   border: none !important; 
+ 
+   object-fit: cover !important;
+   margin-right: 2rem;
+}
+.card-body{
+    padding: 0 !important;
+      width: 100% !important;
+      border-radius: 2rem;
+      
+
+
+}
+.card:hover {
+  transform: translateY(-5px); /* Moves the card up slightly */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Creates a stronger, more noticeable shadow */
+}
+
+/* show route */
+ .cardshow{
+  position: relative;
+  left: 30vh;
+  border: none;
+  border-radius: 16px;
+  padding: 1rem;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+ }
+
+ .nav-link:hover{
+    text-decoration: underline;
+    font-weight: bold;
+
+ }
+ .nav-link i:hover{
+    /* font-size: 1.2rem ; */
+    font-weight: bold;
+    color: red;
+    
+ }
+ .fa-airbnb:hover{
+    font-weight: bold;
+    color: red;
+ }
+
+ /* map */
+
+ #map { 
+    height: 400px;
+    width: 80vh;
+  }
