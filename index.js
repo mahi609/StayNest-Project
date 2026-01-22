@@ -72,7 +72,7 @@ app.use("/", userRoutes);
 
 // HOME
 app.get("/", (req, res) => {
-  res.send("App Working ✅");
+  res.send("App Working ");
 });
 
 // ERROR HANDLER
