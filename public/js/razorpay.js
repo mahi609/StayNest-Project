@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const payBtn = document.querySelector("#payBtn");
 
   if (!payBtn) {
-    console.error("❌ Pay button not found");
+    console.error("Pay button not found");
     return;
   }
 
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const listingId = payBtn.dataset.listingId;
 
     if (!listingId) {
-      console.error("❌ Listing ID missing");
+      console.error(" Listing ID missing");
       return;
     }
 
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
           alert("Payment Successful ✅");
           location.reload();
         } else {
-          alert("Payment Failed ❌");
+          alert("Payment Failed ");
         }
       },
     };
